@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Link.model.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <script src="Link.js"></script>
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <label class="menuaparecer">
+    <span class="material-symbols-outlined">
+      menu
+    </span>
+  </label>
+  <nav class="menu sumir">
+    <ul>
+      <li class="opcao">Redes Sociais
+        <span class="material-symbols-outlined">
+          chevron_right
+        </span>
+        <ul class="submenu">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">LinkeDin</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagran</a></li>
+        </ul>
+      </li>
+      <li>Alura</li>
+      <li>Origamid</li>
+      <li>Youtube</li>
+      <li>Sescop</li>
+      <li class="opcao2">Sites de Busca
+        <span class="material-symbols-outlined">
+          chevron_right
+        </span>
+
+        <ul class="submenu2">
+          <li><a href="#">Google</a></li>
+          <li><a href="#">Bing</a></li>
+          <li><a href="#">Yahoo</a></li>
+          <li><a href="#">Ask.com</a></li>
+          <li><a href="#">Baldu</a></li>
+
+
+
+        </ul>
+      </li>
+      <li>
+        <span class="material-symbols-outlined home">
+          home
+        </span></li>
+    </ul>
+
+  </nav>
+  <script>
+    const opcao = document.querySelector('.opcao');
+    const submenu = document.querySelector('.submenu');
+    const opcao2 = document.querySelector('.opcao2');
+    const submenu2 = document.querySelector('.submenu2');
+    const li = document.querySelectorAll('.menu li');
+    const labelmenu = document.querySelector('.menuaparecer');
+    const menu = document.querySelector('.menu');
+
+    console.log(li)
+
+    opcao.addEventListener('click', () => {
+      submenu.classList.toggle('submenu');
+    });
+
+    opcao2.addEventListener('click', () => {
+      submenu2.classList.toggle('submenu2');
+    });
+    labelmenu.addEventListener('click', () => {
+      console.log(menu.className);
+      menu.classList.remove("sumir");
+
+    });
+
+    const home = document.querySelector('.home');
+    home.addEventListener('click', ()=>{
+      menu.classList.add("sumir");    })
+    // window.document.body.addEventListener('click', () => {
+    //   console.log("r");
+    // })
+
+
+
+
+
+
+// document.body.addEventListener('click',exibir);
+  </script>
+</body>
+
+</html>
